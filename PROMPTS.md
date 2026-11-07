@@ -1,0 +1,3 @@
+Help design an algorithm for correctly and safely dividing an array into N nearly equal contiguous blocks for N MPI processes on a cluster. Explain how rank 0 should wait until every other process has finished its block, and which MPI mechanism should combine the partial sums into the total without a race on the result.
+
+Propose two alternative MPI implementations for calculating the sum of the same array: one with explicit point-to-point messages (MPI_Send / MPI_Recv) and one with collective operations (MPI_Scatterv and MPI_Reduce). Add execution time measurements for the sequential baseline and for each MPI implementation as well.
